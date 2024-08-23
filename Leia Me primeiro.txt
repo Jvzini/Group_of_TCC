@@ -1,0 +1,13 @@
+Me leia antes de mexer com o banco de dados 
+primeiro entre no site a seguir:
+https://freedb.tech/dashboard/
+
+Segundo voce necessitara entrar nesta conta:
+João_Vitor#555
+Valentina01#$*
+
+e depois você ira cliquer na imagem que se parece com um banco de dados 
+e você sera redirecionado para o phpMyadmin onde ira colocar as seguintes informaçôes
+Host: sql.freedb.tech
+User: freedb_Joao_Vitor
+Password: 4Vpauh#e$5&bghN
