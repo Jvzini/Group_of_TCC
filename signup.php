@@ -38,7 +38,7 @@
         
 
         <div class="justify-center">
-          <button type="submit" name="" > Cadastrar</button>
+          <button type="submit" name="enviar" > Cadastrar</button>
         </div>
       </div>
     </div>
@@ -52,6 +52,6 @@ if (isset($_POST['enviar'])):
 $Nome_De_Filme = $_POST['labelNome'];
 $Data_De_Lancamento = $_POST['labelData_lanc'];
 $Sinopse = $_POST['labelsinopse'];
-$sql=mysqli_query($conexao, "INSERT INTO Filmes(Nome_De_Filme, Data_De_Lancamento, Sinopse) VALUES('$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
+$sql=mysqli_query($conexao, "INSERT INTO Filmes(Nome_do_Filme, Data_De_Lancamento, Sinopse) VALUES('$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
 endif;
 ?>
