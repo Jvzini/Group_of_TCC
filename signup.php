@@ -23,7 +23,10 @@ include 'Conexao.php';
 
         <div id="msgError"></div> 
         <div id="msgSuccess"></div>
-
+        <div class="label-float">
+          <input type="text" name="labelcod"/>
+          <label  for="labelNome">cod</label>
+        </div>
         <div class="label-float">
           <input type="text" name="labelNome"/>
           <label  for="labelNome">Nome Do Filme</label>
@@ -54,9 +57,10 @@ include 'Conexao.php';
 
 <?php
 if (isset($_POST['enviar'])):
+  $cod= $_POST['labelcod'];
 $Nome_De_Filme = $_POST['labelNome'];
 $Data_De_Lancamento = $_POST['labelData_lanc'];
 $Sinopse = $_POST['labelsinopse'];
-$sql=mysqli_query($conexao, "INSERT INTO filmes(Nome_do_Filme, Data_de_Lancamento, Sinopse) VALUES('$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
+$sql=mysqli_query($conexao, "INSERT INTO Filmes(cod,Nome_do_Filme, Data_de_Lancamento, Sinopse) VALUES('$cod','$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
 endif;
 ?>
