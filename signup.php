@@ -1,3 +1,7 @@
+<?php
+include 'Conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -12,6 +16,7 @@
     <title>Singup</title>
   </head>
   <body>
+    <form action="" method="post">
     <div class="container">
       <div class="card">
         <h1>Cadastrar Filmes</h1>
@@ -20,18 +25,18 @@
         <div id="msgSuccess"></div>
 
         <div class="label-float">
-          <input type="text" id="nome_filme" placeholder=" " required />
-          <label name="labelNome" for="nome">Nome Do Filme</label>
+          <input type="text" name="labelNome"/>
+          <label  for="labelNome">Nome Do Filme</label>
         </div>
 
         <div class="label-float">
-          <input type="text" id="data_lanc" placeholder=" " required />
-          <label name="labelData_lanc" for="data_lanc">Data De Lançamento</label>
+          <input type="text" name="labelData_lanc"/>
+          <label  for="data_lanc">Data De Lançamento</label>
         </div>
 
         <div class="label-float">
-          <input type="text" id="sinopse" placeholder=" " required />
-          <label name="labelsinopse" for="sinopse">Sinopse</label>
+          <input type="text" name="labelsinopse" />
+          <label  for="sinopse">Sinopse</label>
           
         </div>
 
@@ -42,7 +47,7 @@
         </div>
       </div>
     </div>
-
+    </form>
     
   </body>
 </html>
@@ -52,6 +57,6 @@ if (isset($_POST['enviar'])):
 $Nome_De_Filme = $_POST['labelNome'];
 $Data_De_Lancamento = $_POST['labelData_lanc'];
 $Sinopse = $_POST['labelsinopse'];
-$sql=mysqli_query($conexao, "INSERT INTO Filmes(Nome_do_Filme, Data_De_Lancamento, Sinopse) VALUES('$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
+$sql=mysqli_query($conexao, "INSERT INTO filmes(Nome_do_Filme, Data_de_Lancamento, Sinopse) VALUES('$Nome_De_Filme', '$Data_De_Lancamento','$Sinopse')");
 endif;
 ?>
