@@ -25,17 +25,17 @@ include 'Conexao.php';
         <div id="msgSuccess"></div>
 
         <div class="label-float">
-          <input type="text" name="labelNome"/>
-          <label  for="labelNome">Nome Do Filme</label>
+          <input type="text" name="labelNome" placeholder=" " required/>
+          <label  for="nome">Nome Do Filme</label>
         </div>
 
         <div class="label-float">
-          <input type="text" name="labelData_lanc"/>
+          <input type="text" name="labelData_lanc" placeholder=" " required/>
           <label  for="data_lanc">Data De Lançamento</label>
         </div>
 
         <div class="label-float">
-          <input type="text" name="labelsinopse" />
+          <input type="text" name="labelsinopse" placeholder=" " required/>
           <label  for="sinopse">Sinopse</label>
           
         </div>
